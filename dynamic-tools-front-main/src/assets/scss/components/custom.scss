@@ -1,0 +1,1137 @@
+.cswitch {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cswitch--label {
+  margin-left: 0.5rem;
+  color: #9a75e2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cswitch--input {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  width: 0;
+  height: 0;
+  top: -100rem;
+  left: -100rem;
+}
+
+.cswitch--trigger {
+  position: relative;
+  height: 14px;
+  width: 34px;
+  border-radius: 5rem;
+  transition: all 0.3s ease-in;
+  background-color: rgb(255 255 255 / 50%);
+  margin-right: 5px;
+}
+
+.cswitch--trigger::after {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background: #9a75e2;
+  left: 8px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 100%;
+}
+
+.cswitch input:checked ~ .cswitch--trigger {
+  background-color: #d7d7d7;
+}
+
+.cswitch input:checked ~ .cswitch--trigger::after {
+  left: calc(100% - 8px);
+}
+
+.tab-list ul {
+  padding: 0px;
+}
+
+.tab-list ul li {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-list .activelink {
+  color: #fff;
+  background: #9a75e2;
+}
+
+.custom-radio-list [type='radio']:checked,
+.custom-radio-list [type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.custom-radio-list [type='radio']:checked + label,
+.custom-radio-list [type='radio']:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 1.6;
+  display: inline-block;
+  color: rgb(255 255 255 / 70%);
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.custom-radio-list [type='radio']:checked + label:before,
+.custom-radio-list [type='radio']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: rgb(255 255 255 / 10%);
+}
+
+.custom-radio-list [type='radio']:checked + label:after,
+.custom-radio-list [type='radio']:not(:checked) + label:after {
+  content: '';
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid #9a75e2;
+  border-right: 2px solid #9a75e2;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+
+.custom-radio-list [type='radio']:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.custom-radio-list [type='radio']:checked + label:after {
+  opacity: 1;
+}
+
+.content:before {
+  content: '';
+  position: absolute;
+  background: url('../../images/body-bg.png') no-repeat 50px -65px;
+  width: 600px;
+  height: 600px;
+  right: 0;
+  top: 0;
+}
+
+.market-overview-head {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.market-overview-head {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.market-overview-col {
+  width: 50%;
+  padding: 0 15px;
+  margin: 0 0 15px;
+}
+
+ul.market-overview-list {
+  margin: 0 0 15px;
+  padding: 0;
+  background: #34343d;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+ul.market-overview-list li {
+  display: inline-block;
+}
+
+.text-r {
+  text-align: right;
+}
+
+ul.market-overview-list li p {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 17px;
+  border-radius: 25px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+ul.market-overview-list li p.active,
+ul.market-overview-list li p:hover {
+  background: #9a75e2;
+  color: #fff;
+}
+
+.market-overview-col-in span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.switch--box {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+ul.tab-list {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 2px solid rgb(211 211 211 / 21%);
+}
+
+ul.tab-list li {
+  display: inline-block;
+}
+
+ul.tab-list p {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin: 0px !important;
+}
+
+ul.tab-list a {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+ul.custom-radio-list {
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+ul.custom-radio-list li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.market-text-editor {
+  padding-top: 50px;
+}
+
+ul.text-edit-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul.text-edit-list li {
+  display: block;
+}
+
+ul.text-edit-list li a {
+  background: #3f3f48;
+  border: 1px solid #707070;
+  display: block;
+  min-width: 45px;
+  text-align: center;
+  min-height: 30px;
+  border-radius: 6px 6px 0 0;
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0 13px;
+  color: #fff;
+}
+
+ul.text-edit-list li a.active {
+  background: #fff;
+  color: #9a75e2;
+  border-color: #fff;
+}
+
+.text-aria textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  height: 180px;
+}
+
+.search-by {
+  right: 0;
+  top: 25px;
+  font-size: 13px;
+  padding-left: 7px;
+}
+
+.search-by:before {
+  position: absolute;
+  content: '';
+  background: #6f47be;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 0;
+  border: 3px solid rgb(23 35 46 / 80%);
+  box-shadow: 0 0 0 1px #17232e;
+  top: 3px;
+}
+
+.menu-icon {
+  font-size: 18px;
+}
+
+.save-format {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.save-format:hover {
+  background: #9a75e2;
+  color: #fff;
+  border-color: #9a75e2;
+}
+
+.cswitch--label.currency-image {
+  color: #9a75e2;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.currency-image {
+  color: #fff;
+  font-size: 18px;
+  display: contents !important;
+}
+
+.lo-hi i {
+  color: #9a75e2;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.m-min {
+  margin-top: -20px;
+  position: absolute;
+  font-size: 12px;
+  left: 0;
+  width: 100%;
+  color: #9a75e2;
+}
+
+.m-min.active {
+  color: #fff;
+  text-decoration: underline;
+  z-index: 99999;
+}
+
+.track-time {
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: -20px !important;
+  display: none;
+}
+
+.m-min:hover .track-time {
+  display: block;
+}
+
+.track-time a {
+  display: block;
+  color: #666;
+  padding: 5px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.track-time a:last-child {
+  border-bottom: none;
+}
+
+.text-green {
+  color: #4ff866 !important;
+}
+
+.text-red {
+  color: #f84f4f !important;
+}
+
+.text-line {
+  border: 2px solid #9a75e2;
+  margin: 5px 0 0 !important;
+}
+
+.market-cap {
+  color: rgb(255 255 255 / 70%);
+}
+
+.market-cap-rate {
+  color: #fff;
+  font-size: 24px;
+  display: block;
+}
+
+.market-cap-down {
+  color: #f84f4f;
+  font-size: 16px;
+}
+
+.market-cap-box {
+  background: #3f3f48;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.market-cap-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.market-cap-head-col {
+  padding: 10px 15px;
+}
+
+.market-cap-head-col {
+  padding: 10px 15px;
+  color: rgb(255 255 255 / 70%);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.market-cap-head-col span.market-cap-rate {
+  font-size: 22px;
+}
+
+.market-cap-head-col .market-cap-down {
+  font-size: 14px;
+}
+
+.market-cap-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.market-cap-footer span {
+  font-size: 10px;
+  color: rgb(255 255 255 / 70%);
+  padding: 7px 15px;
+}
+
+.market-cap-body img {
+  display: block;
+  width: 100%;
+}
+
+.custom-xl-2 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.market-tab-in {
+  padding: 25px;
+}
+
+.market-tab-in.active {
+  display: block !important;
+}
+
+.over-tab-close .text-r,
+.over-tab-close .market-overview-tab {
+  display: none;
+}
+
+.over-tab-close .market-overview-col {
+  width: 100%;
+  margin: 0;
+}
+
+.over-btn {
+  cursor: pointer;
+  margin: 0;
+}
+
+.over-btn-icon {
+  width: 30px;
+  height: 3px;
+  display: inline-block;
+  background: #fff;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+}
+
+.over-tab-close .over-btn-icon {
+  background: #9a75e2;
+}
+
+.over-tab-close .over-btn-icon:after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: #9a75e2;
+  height: 30px;
+  top: -14px;
+  left: 50%;
+  margin-left: -1px;
+}
+
+ul.market-an-r li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+ul.market-an-r li a img {
+  width: 30px;
+}
+
+ul.market-an-r {
+  margin-top: 5px;
+}
+
+.add-wish {
+  background: #707070;
+  border-radius: 5px !important;
+}
+
+.radius-0 {
+  border-radius: 0 !important;
+}
+
+.bg-0 {
+  background: transparent !important;
+}
+
+.brn-green {
+  background: #34d399;
+}
+
+.text-down-arrow {
+  text-align: center;
+  font-size: 36px;
+  opacity: 0.5;
+}
+
+.text-down-arrow:hover {
+  opacity: 1;
+}
+
+.text-down-arrow span i {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.market-tab-in ul.tab-list {
+  padding: 0 0 6px;
+}
+
+.market-tab-in ul.tab-list a {
+  padding: 8px 2px;
+  color: #ddd;
+}
+
+.market-tab-in ul.tab-list li {
+  margin-right: 30px;
+}
+
+.market-tab-in ul.tab-list .activelink:after {
+  content: '';
+  background: #9a75e2;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+}
+
+.market-tab-in .activelink {
+  background: none;
+  position: relative;
+  color: #fff !important;
+}
+
+ul.market-overview-list li .btn-blue {
+  background: #9a75e2;
+  color: #fff;
+}
+
+ul.market-overview-list li span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 17px;
+  border-radius: 25px;
+}
+
+.trad-period span {
+  padding: 0px 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.trad-period a,
+.trad-period {
+  color: #ccc;
+}
+
+.trad-period > span:hover {
+  border: 1px solid #9a75e2 !important;
+  border-radius: 10px !important;
+  padding: 3px !important;
+  color: white !important;
+}
+
+.trad-period a:hover {
+  color: #fff;
+}
+
+.click-tougle {
+  display: flex;
+  align-items: center;
+}
+
+.salesTabHeading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AnalyticsChartsGroup {
+  display: flex !important;
+  justify-content: space-between !important;
+  max-width: 100% !important;
+}
+
+.analyticsChart {
+  width: 85% !important;
+}
+
+.analyticsSideChart {
+  width: 10% !important;
+}
+
+.Resistance {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.listingGraphHeader {
+  padding: 20px;
+}
+
+.activeClass {
+  color: #9a75e2 !important;
+}
+
+.tab.active {
+  color: #9a75e2;
+}
+
+.lowestColor {
+  color: rgb(255, 99, 132) !important ;
+}
+
+.averageColor {
+  color: #df4ee4 !important;
+}
+
+.highestColor {
+  color: #34d299 !important;
+}
+
+.volumeColor {
+  color: #818181 !important;
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+  accent-color: #818181;
+}
+
+.time-range {
+  background: none;
+  border: none;
+  color: #ccc;
+  transition: none;
+
+  &.active,
+  &:hover:not(.disabled) {
+    border: 1px solid #9a75e2 !important;
+    border-radius: 10px !important;
+    padding: 3px !important;
+    color: white !important;
+    font-weight: 500 !important;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    border: none;
+    cursor: default;
+  }
+}
+
+.text-edit-list-new {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-edit-list-new li p {
+  background: #3f3f48;
+  border: 1px solid #707070;
+  display: block;
+  min-width: 45px;
+  text-align: center;
+  min-height: 30px;
+  border-radius: 6px 6px 0 0;
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0 13px;
+  color: #fff;
+  margin: 0px;
+}
+
+.custom-radio-list [type='checkbox'] + label {
+  cursor: pointer !important;
+}
+
+.collectionNotFound {
+  height: 500px;
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column !important;
+}
+
+.backToHomeText {
+  cursor: pointer;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.backToHomeText:hover {
+  color: #9a75e2;
+}
+
+.connectWalletTextForWatchlist {
+  margin: 0;
+  padding: 134px 0px;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* check box css for a*/
+
+.checkbox.style-a {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox.style-a input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.style-a input:checked ~ .checkbox__checkmark {
+  background-color: #ff6384;
+}
+
+.checkbox.style-a input:checked ~ .checkbox__checkmark:after {
+  opacity: 1;
+}
+
+.checkbox.style-a:hover input ~ .checkbox__checkmark {
+  background-color: #eee;
+}
+
+.checkbox.style-a:hover input:checked ~ .checkbox__checkmark {
+  background-color: #ff6384;
+}
+
+.checkbox.style-a .checkbox__checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  transition: background-color 0.25s ease;
+  border-radius: 11px;
+}
+
+.checkbox.style-a .checkbox__checkmark:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.checkbox.style-a .checkbox__body {
+  color: #fff;
+  line-height: 1.4;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+
+/* checkbox style for b */
+
+.checkbox.style-b {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox.style-b input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.style-b input:checked ~ .checkbox__checkmark {
+  background-color: #df4ee4;
+}
+
+.checkbox.style-b input:checked ~ .checkbox__checkmark:after {
+  opacity: 1;
+}
+
+.checkbox.style-b:hover input ~ .checkbox__checkmark {
+  background-color: #eee;
+}
+
+.checkbox.style-b:hover input:checked ~ .checkbox__checkmark {
+  background-color: #df4ee4;
+}
+
+.checkbox.style-b .checkbox__checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  transition: background-color 0.25s ease;
+  border-radius: 11px;
+}
+
+.checkbox.style-b .checkbox__checkmark:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.checkbox.style-b .checkbox__body {
+  color: #fff;
+  line-height: 1.4;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+
+/* checkbox style for c */
+
+.checkbox.style-c {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox.style-c input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.style-c input:checked ~ .checkbox__checkmark {
+  background-color: #34d299;
+}
+
+.checkbox.style-c input:checked ~ .checkbox__checkmark:after {
+  opacity: 1;
+}
+
+.checkbox.style-c:hover input ~ .checkbox__checkmark {
+  background-color: #eee;
+}
+
+.checkbox.style-c:hover input:checked ~ .checkbox__checkmark {
+  background-color: #34d299;
+}
+
+.checkbox.style-c .checkbox__checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  transition: background-color 0.25s ease;
+  border-radius: 11px;
+}
+
+.checkbox.style-c .checkbox__checkmark:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.checkbox.style-c .checkbox__body {
+  color: #fff;
+  line-height: 1.4;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+
+/* checkbox style for d */
+
+.checkbox.style-d {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox.style-d input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox.style-d input:checked ~ .checkbox__checkmark {
+  background-color: #818181;
+}
+
+.checkbox.style-d input:checked ~ .checkbox__checkmark:after {
+  opacity: 1;
+}
+
+.checkbox.style-d:hover input ~ .checkbox__checkmark {
+  background-color: #eee;
+}
+
+.checkbox.style-d:hover input:checked ~ .checkbox__checkmark {
+  background-color: #818181;
+}
+
+.checkbox.style-d .checkbox__checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+  transition: background-color 0.25s ease;
+  border-radius: 11px;
+}
+
+.checkbox.style-d .checkbox__checkmark:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.checkbox.style-d .checkbox__body {
+  color: #fff;
+  line-height: 1.4;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+
+/* contact form css */
+.contact-section .form-control {
+  border: 1px solid #2fbfbc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+}
+
+.contact-fields {
+  padding: 40px 0px 0px;
+}
+
+.email,
+.working-hours {
+  margin-bottom: 30px;
+}
+
+.email h2,
+.working-hours h2 {
+  margin-top: 0px;
+}
+
+.phone a,
+.email a {
+  font-size: 18px;
+}
+
+.contact-fields .form-group {
+  margin-bottom: 35px;
+}
+
+.contact-fields .form-group input,
+.contact-fields .form-group textarea {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 980px) {
+  .contact-info {
+    padding-left: 110px;
+  }
+}
+
+/* animated right icon */
+
+@-webkit-keyframes bounceLeft {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  60% {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+@-moz-keyframes bounceLeft {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(30px);
+  }
+  60% {
+    transform: translateX(15px);
+  }
+}
+
+@keyframes bounceLeft {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  60% {
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+}
+
+.fa-arrow-left {
+  -webkit-animation: bounceLeft 2s infinite;
+  animation: bounceLeft 2s infinite;
+}

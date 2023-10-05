@@ -1,0 +1,105 @@
+{
+  "name": "dynamic.tools-api",
+  "version": "1.0.0",
+  "description": "Dynamic Tools backend",
+  "main": "src/index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm run lint"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "yarn lint:fix",
+      "prettier --write",
+      "yarn test:debug",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write"
+    ]
+  },
+  "scripts": {
+    "start": "node ./src/index.js | pino-colada",
+    "dev": "nodemon ./src/index.js | pino-colada",
+    "test": "jest",
+    "test:debug": "jest --verbose",
+    "test:nocache": "jest --no-cache --runInBand",
+    "test:watch": "jest --watch --verbose false",
+    "test:ci": "jest --coverage --verbose --runInBand --no-cache",
+    "lint": "eslint --ext .ts,.js {src,migrations}/**/*",
+    "lint:fix": "eslint --fix --ext .ts,.js {src,migrations}/**/*",
+    "pretty": "prettier --write ./{src}/**/*.{js,json,md} && prettier --write ./*.{js,json,md,yaml}"
+  },
+  "engines": {
+    "node": ">=14.18.0",
+    "npm": ">=6.14.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/enyosolutions_clients/dynamic.tools-api.git"
+  },
+  "author": "Oleg Zharkikh <oleg@enyosolutions.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://gitlab.com/enyosolutions_clients/dynamic.tools-api/issues"
+  },
+  "homepage": "https://gitlab.com/enyosolutions_clients/dynamic.tools-api#readme",
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "@sentry/node": "^7.19.0",
+    "@sentry/tracing": "^7.19.0",
+    "axios": "1.1.3",
+    "bignumber.js": "^9.1.1",
+    "body-parser": "^1.20.1",
+    "bytes": "^3.1.2",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "ethereum-input-data-decoder": "^0.4.2",
+    "ethereumjs-util": "^7.1.5",
+    "express": "^4.18.2",
+    "express-pino-logger": "^7.0.0",
+    "express-query-params": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.2",
+    "mongoose-history-plugin": "^3.0.1",
+    "mongoose-paginate": "^5.0.3",
+    "node-cron": "^3.0.2",
+    "passport": "^0.6.0",
+    "pino": "^8.7.0",
+    "pino-debug": "^2.0.0",
+    "source-map-support": "^0.5.21",
+    "swagger-ui-express": "^4.6.0",
+    "web3": "^1.8.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@swc/jest": "^0.2.24",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.2",
+    "jest": "^29.4.0",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.20",
+    "pino-colada": "^2.2.2",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "regex": "^[@]",
+      "orderLevel": 5
+    },
+    {
+      "regex": "^[^.@]",
+      "orderLevel": 10
+    },
+    {
+      "type": "importMember",
+      "regex": "^$",
+      "orderLevel": 15
+    },
+    {
+      "regex": "^[.]",
+      "orderLevel": 30
+    }
+  ],
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.sortConfiguration.customOrderingRules.defaultNumberOfEmptyLinesAfterGroup": 0,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 110,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimit",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "terminal.integrated.scrollback": 100000,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "files.maxMemoryForLargeFilesMB": 13000,
+  "diffEditor.ignoreTrimWhitespace": false
+}
